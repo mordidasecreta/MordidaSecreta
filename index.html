@@ -1,117 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mordida Secreta</title>
+<title>Mordida Secreta 🔒</title>
 
 <style>
 
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:#050505;
 color:white;
 }
 
+
 header{
-padding:20px;
 text-align:center;
+padding:25px;
 }
+
 
 .logo{
-width:160px;
+width:180px;
 }
 
+
+
 .hero{
+
 display:flex;
 align-items:center;
 justify-content:center;
-gap:30px;
-padding:40px;
+gap:40px;
+padding:30px;
 flex-wrap:wrap;
+
 }
+
 
 .texto{
-max-width:450px;
+
+max-width:500px;
+
 }
+
+
 
 h1{
+
 font-size:55px;
-line-height:1;
+line-height:1.05;
+margin:0;
+
 }
+
 
 h1 span{
+
 color:#ffb000;
+
 }
+
+
 
 p{
-font-size:20px;
+
+font-size:21px;
 color:#ddd;
+line-height:1.5;
+
 }
+
+
 
 .sandwich{
+
 width:550px;
 max-width:95%;
-border-radius:20px;
+border-radius:25px;
+
 }
 
+
+
 .btn{
+
 display:inline-block;
 background:#25D366;
 color:white;
-padding:15px 30px;
-border-radius:30px;
+padding:18px 35px;
+border-radius:40px;
 text-decoration:none;
+font-size:20px;
 font-weight:bold;
 margin-top:20px;
+
 }
 
-.menu{
-padding:40px;
+
+
+
+.seccion{
+
 text-align:center;
+padding:40px;
+
 }
 
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
 
-.card{
-background:#111;
-border:2px solid #ffb000;
-border-radius:20px;
-padding:25px;
-width:250px;
-}
 
-.precio{
+.titulo{
+
 font-size:35px;
 color:#ffb000;
-font-weight:bold;
+
 }
 
-.ingredientes{
+
+
+.cards{
+
 display:flex;
 justify-content:center;
-gap:20px;
+gap:25px;
+flex-wrap:wrap;
+
+}
+
+
+
+.card{
+
+background:#111;
+border:2px solid #ffb000;
+border-radius:25px;
+padding:25px;
+width:280px;
+
+}
+
+
+
+.card img{
+
+width:100%;
+border-radius:15px;
+
+}
+
+
+
+.card h2{
+
+font-size:26px;
+
+}
+
+
+
+.precio{
+
+font-size:38px;
+color:#ffb000;
+font-weight:bold;
+
+}
+
+
+
+
+.ingredientes{
+
+display:flex;
+justify-content:center;
+gap:15px;
 flex-wrap:wrap;
 padding:30px;
+
 }
+
+
 
 .item{
+
 background:#111;
-padding:20px;
-border-radius:15px;
+padding:15px 20px;
+border-radius:20px;
+border:1px solid #333;
+
 }
 
+
+
+
 footer{
+
 text-align:center;
 padding:30px;
 color:#aaa;
+
 }
 
 
@@ -120,7 +214,9 @@ color:#aaa;
 </head>
 
 
+
 <body>
+
 
 
 <header>
@@ -131,33 +227,49 @@ color:#aaa;
 
 
 
+
+
 <section class="hero">
 
 
 <div class="texto">
 
+
 <h1>
+
 El sabor que
+
 <span>
 no podrás guardar
 </span>
+
 en secreto 🔥
+
 </h1>
 
 
+
 <p>
+
+La Explosiva 🌶️
+
 Sándwich de 22 cm con pollo desmechado,
-salsa secreta de la casa, queso,
-maicitos, tocineta y mucho sabor.
+queso derretido, maicitos, tocineta,
+tomate fresco, lechuga y nuestra salsa secreta de la casa.
+
 </p>
 
 
-<a class="btn" href="https://wa.me/573183785587">
-Pedir por WhatsApp
+
+<a class="btn" href="https://wa.me/573183785587?text=Hola%20quiero%20pedir%20mi%20Mordida%20Secreta%20🔥">
+
+🔥 QUIERO MI SÁNDWICH
+
 </a>
 
 
 </div>
+
 
 
 
@@ -168,50 +280,107 @@ Pedir por WhatsApp
 
 
 
-<section class="menu">
 
-<h2>Nuestro Menú</h2>
+
+
+<section class="seccion">
+
+
+<h2 class="titulo">
+
+Nuestra Explosiva 🔥
+
+</h2>
+
 
 
 <div class="cards">
 
 
-<div class="card">
-
-<h3>Sándwich + Papas</h3>
-
-<div class="precio">
-$18.000
-</div>
-
-</div>
-
-
 
 <div class="card">
 
-<h3>Combo + Coca Cola 400ml</h3>
 
-<div class="precio">
-$21.000
-</div>
+<h2>
 
-</div><div class="card">
+La Explosiva
 
-<img src="comboe.jpg" style="width:100%; border-radius:15px;">
+</h2>
 
-<h3>Combo Mordida Secreta 🔥</h3>
 
 <p>
-Sándwich + papas + Coca-Cola 400ml
+
+Sándwich 22 cm
+
 </p>
 
+
 <div class="precio">
+
+$18.000
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Combo Explosiva 🍟🥤
+
+</h2>
+
+
+<p>
+
+Sándwich + papas + Coca-Cola 400 ml
+
+</p>
+
+
+<div class="precio">
+
 $21.000
-</div>
 
 </div>
 
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+Coca-Cola 400 ml
+
+</h2>
+
+
+<p>
+
+La bebida perfecta
+
+</p>
+
+
+<div class="precio">
+
+$4.000
+
+</div>
+
+
+</div>
 
 
 
@@ -222,37 +391,67 @@ $21.000
 
 
 
+
+
+
+
 <section class="ingredientes">
+
 
 <div class="item">
 🍗 Pollo desmechado
 </div>
 
-<div class="item">
-🥬 Ingredientes frescos
-</div>
-
-<div class="item">
-🔥 Salsa secreta
-</div>
 
 <div class="item">
 🧀 Queso derretido
 </div>
 
 
+<div class="item">
+🥓 Tocineta
+</div>
+
+
+<div class="item">
+🌽 Maicitos
+</div>
+
+
+<div class="item">
+🔥 Salsa secreta
+</div>
+
+
+
 </section>
+
+
+
+
 
 
 
 <footer>
 
-Mordida Secreta 🔒  
+
+Mordida Secreta 🔒
+
 <br>
-318 378 5587
+
+Discreto por fuera,
+inolvidable por dentro.
+
+<br><br>
+
+📲 318 378 5587
+
 
 </footer>
 
 
+
+
 </body>
+
 </html>
