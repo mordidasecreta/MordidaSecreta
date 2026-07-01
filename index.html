@@ -268,6 +268,144 @@ border:1px solid #333;
 }
 
 
+<section class="seccion">
+
+<h2 class="titulo">
+Haz tu pedido 🔥
+</h2>
+
+
+<div class="card">
+
+<h3>Selecciona tu producto</h3>
+
+
+<select id="producto">
+
+<option value="La Explosiva $18.000">
+La Explosiva - $18.000
+</option>
+
+<option value="Combo Explosiva $21.000">
+Combo Explosiva + Papas + Coca-Cola 400ml - $21.000
+</option>
+
+<option value="Coca-Cola 400ml $4.000">
+Coca-Cola 400ml - $4.000
+</option>
+
+
+</select>
+
+
+<br><br>
+
+
+<input id="cantidad" type="number" value="1" min="1" placeholder="Cantidad">
+
+
+<br><br>
+
+
+<input id="nombre" placeholder="Tu nombre">
+
+
+<br><br>
+
+
+<input id="telefono" placeholder="Teléfono">
+
+
+<br><br>
+
+
+<input id="direccion" placeholder="Dirección">
+
+
+<br><br>
+
+
+<textarea id="nota" placeholder="Notas del pedido"></textarea>
+
+
+<br><br>
+
+
+<button class="btn" onclick="pedido()">
+
+🔥 Enviar pedido
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+<script>
+
+function pedido(){
+
+
+let producto =
+document.getElementById("producto").value;
+
+
+let cantidad =
+document.getElementById("cantidad").value;
+
+
+let nombre =
+document.getElementById("nombre").value;
+
+
+let telefono =
+document.getElementById("telefono").value;
+
+
+let direccion =
+document.getElementById("direccion").value;
+
+
+let nota =
+document.getElementById("nota").value;
+
+
+
+let mensaje =
+`Hola Mordida Secreta 🔒🔥
+
+Pedido:
+${cantidad} x ${producto}
+
+Cliente:
+${nombre}
+
+Teléfono:
+${telefono}
+
+Dirección:
+${direccion}
+
+Notas:
+${nota}`;
+
+
+
+window.open(
+"https://wa.me/573183785587?text="
++encodeURIComponent(mensaje)
+);
+
+
+}
+
+
+</script>
+
+
 
 
 footer{
