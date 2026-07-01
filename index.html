@@ -270,9 +270,9 @@ border:1px solid #333;
 
 <section class="seccion">
 
-<h2 class="titulo">
-Haz tu pedido 🔥
-</h2>
+
+
+  
 
 
 <div class="card">
@@ -401,6 +401,264 @@ window.open(
 
 
 }
+
+
+</script>
+
+<section class="seccion">
+
+<h2 class="titulo">
+Tu pedido 🔥
+</h2>
+
+
+<div class="card">
+
+
+<h3>Agrega productos</h3>
+
+
+<select id="producto">
+
+<option value="La Explosiva" data-precio="18000">
+🔥 La Explosiva - $18.000
+</option>
+
+
+<option value="Combo Explosiva" data-precio="21000">
+🍟 Combo Explosiva - $21.000
+</option>
+
+
+<option value="Coca-Cola 400 ml" data-precio="4000">
+🥤 Coca-Cola 400 ml - $4.000
+</option>
+
+
+</select>
+
+
+<br><br>
+
+
+<input id="cantidad" 
+type="number" 
+value="1" 
+min="1">
+
+
+<br><br>
+
+
+<button class="btn" onclick="agregar()">
+
+➕ Agregar
+
+</button>
+
+
+<h3>
+Pedido:
+</h3>
+
+
+<div id="lista">
+
+</div>
+
+
+<h2>
+Total:
+<span id="total">$0</span>
+</h2>
+
+
+
+<hr>
+
+
+<h3>
+Datos del cliente
+</h3>
+
+
+<input id="nombre" placeholder="Nombre">
+
+
+<br><br>
+
+
+<input id="telefono" placeholder="Teléfono">
+
+
+<br><br>
+
+
+<input id="direccion" placeholder="Dirección">
+
+
+<br><br>
+
+
+<textarea id="nota" placeholder="Notas"></textarea>
+
+
+<br><br>
+
+
+<button class="btn" onclick="enviar()">
+
+🔥 Enviar pedido
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+let carrito=[];
+
+
+
+function agregar(){
+
+
+let select=document.getElementById("producto");
+
+
+let producto=
+select.value;
+
+
+let precio=
+Number(select.options[select.selectedIndex].dataset.precio);
+
+
+let cantidad=
+Number(document.getElementById("cantidad").value);
+
+
+
+carrito.push({
+
+producto,
+precio,
+cantidad
+
+});
+
+
+mostrar();
+
+
+}
+
+
+
+function mostrar(){
+
+
+let lista=document.getElementById("lista");
+
+
+lista.innerHTML="";
+
+
+let total=0;
+
+
+
+carrito.forEach((item)=>{
+
+
+total += item.precio * item.cantidad;
+
+
+lista.innerHTML +=
+`
+<p>
+${item.cantidad} x ${item.producto}
+</p>
+`;
+
+
+});
+
+
+
+document.getElementById("total").innerHTML=
+"$"+total.toLocaleString();
+
+
+
+}
+
+
+
+
+function enviar(){
+
+
+let texto=
+"Hola Mordida Secreta 🔒🔥%0A%0A";
+
+
+carrito.forEach((item)=>{
+
+
+texto +=
+`${item.cantidad} x ${item.producto}%0A`;
+
+
+});
+
+
+
+texto += "%0A";
+
+
+texto +=
+"Cliente: "+
+document.getElementById("nombre").value+
+"%0A";
+
+
+texto +=
+"Teléfono: "+
+document.getElementById("telefono").value+
+"%0A";
+
+
+texto +=
+"Dirección: "+
+document.getElementById("direccion").value+
+"%0A";
+
+
+texto +=
+"Notas: "+
+document.getElementById("nota").value;
+
+
+
+window.open(
+
+"https://wa.me/573183785587?text="
++texto
+
+);
+
+
+
+}
+
 
 
 </script>
